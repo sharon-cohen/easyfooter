@@ -1,8 +1,8 @@
 name: easyfooter
-description: A new Flutter package.
+description: Navigation package.
 version: 0.0.1
 author: SharonCohen<sharonc49510@gmail.com>
-homepage:
+homepage: https://github.com/sharon-cohen/easyfooter.git
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
