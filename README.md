@@ -42,7 +42,7 @@ example
       key: PageStorageKey('page3'),
     ),
   ];
-  ```
+ ```
 * key vlaue== id vlaue 
 ```                                    
 static const String id = "page2";    
@@ -51,7 +51,7 @@ Page2(
       key: PageStorageKey('page2'),
     ),
  ```
- * create map<string, icon> for evrey page will be name and icon
+* create map<string, icon> for evrey page will be name and icon
  example
  ```
  Map<String,Icon> icons={
@@ -78,9 +78,8 @@ Widget build(BuildContext context) {
 ```
 
 class style
-* create one set pages/ ceate main set page and second set pages
-```
-# ExtraIcons: true // ExtraIcons: false (defult)
+#  create one set pages/ ceate main set page and second set pages
+  ExtraIcons: true // ExtraIcons: false (defult)
  * if  ExtraIcons:false add:
 ```
 BottomNavigationBarController(ListPage: this.pages,mainSetPage: this.icons);
