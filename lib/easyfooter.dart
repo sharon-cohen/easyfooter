@@ -59,11 +59,10 @@ class  _BottomNavigationBarControllerState
   }
 
   void initvale(String id) {
-  print(namepage);
-    print(id);
+
+
    var index=namepage.indexOf(id);
-   print('index');
-   print(index) ;
+
    _selectedIndex=index;
   }
 
@@ -71,7 +70,7 @@ class  _BottomNavigationBarControllerState
     int i=widget.mainSetPage.length;
     List<PopupMenuItem<int>> list=[];
     widget.secondSetPage.forEach((k, v) {
-     print(i);
+
       list.add( PopupMenuItem<int>(
         value: i,
         child: FlatButton(
@@ -172,7 +171,7 @@ class  _BottomNavigationBarControllerState
         return 0;
     }
     else{
-      print(_selectedIndex);
+
       return _selectedIndex;
     }
 
