@@ -99,8 +99,9 @@ List<Widget> pages2 = [ ...  ];
 BottomNavigationBarController(ListPage: this.pages,mainSetPage: this.icons, MoreListPage: this.pages2,secondSetPage: this.icons2,ExtraIcons: true,styleOpen:1)
 ```
 <img width="201" alt="Open1" src="https://user-images.githubusercontent.com/62427228/87848837-6628ac00-c8ec-11ea-83b6-7cd4ac455158.PNG">
+styleOpen:1
 <img width="191" alt="open2" src="https://user-images.githubusercontent.com/62427228/87848839-69239c80-c8ec-11ea-938d-a63c59f22a73.PNG">
-
+ styleOpen:0
 # background color 
 ```
 final Color backroundColorOne; \\ main pages
