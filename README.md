@@ -53,5 +53,31 @@ Page2(
       key: PageStorageKey('page2'),
     ),
  ```
+ * create map<string, icon> for evrey page will be name and icon
+ example
+ ```
+ Map<String,Icon> icons={
+    'page1': Icon(Icons.home,color: Colors.black,),
+    'page2': Icon(Icons.receipt,color: Colors.black,),
+    'page3': Icon(Icons.event,color: Colors.black,),
+  };
+  ```
+# step 3
+main class create
+``` 
+Widget build(BuildContext context) {
+
+    return MaterialApp(
+      initialRoute: BottomNavigationBarController.id,
+      routes: {
+
+        BottomNavigationBarController.id :(context)=> BottomNavigationBarController(ListPage: this.pages,mainSettPage: this.icons,
+            MoreListPage: this.pages2,secondSetPage: this.icons2, styleOpen:1),
+
+      },
+    );
+  }
+```
+# result
 
  
