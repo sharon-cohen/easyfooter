@@ -7,7 +7,7 @@ class BottomNavigationBarController extends StatefulWidget {
    List<Widget> ListPage;
    final int styleOpen;
    final List<Widget> MoreListPage;
-   final Map<String,Icon> mainSettPage;
+   final Map<String,Icon> mainSetPage;
    final Map<String,Icon> secondSetPage;
    final Color backroundColorOne;
    final Color backroundColorTwo;
@@ -21,17 +21,14 @@ class BottomNavigationBarController extends StatefulWidget {
      this.MoreListPage,
      this.AftertapColor=Colors.black,
      this.BeforetapColor=Colors.grey,
-     this.mainSettPage,
+     this.mainSetPage,
      this.backroundColorTwo=Colors.white,
      this.backroundColorOne=Colors.white,
-     this.ExtraIcons=true}):
-         assert(ListPage.length==mainSettPage.length, 'the icons map length!= page list length'),
+     this.ExtraIcons=false}):
+         assert(ListPage.length==mainSetPage.length, 'the icons map length!= page list length'),
          assert(ListPage.isNotEmpty,  'empty list page'),
-         assert(MoreListPage.isNotEmpty && ExtraIcons==true && secondSetPage.isNotEmpty,  'exstre icons need 2 list of pages'),
          assert(ListPage.length<6, 'the length of ListPage need to be <6 '),
-         assert(MoreListPage.length==secondSetPage.length, 'the icons map length!= page list length'),
-         assert(ListPage.isNotEmpty, 'empty list of page'),
-         assert(mainSettPage.isNotEmpty, 'empty list of icons');
+         assert(mainSetPage.isNotEmpty, 'empty list of icons');
   @override
   _BottomNavigationBarControllerState createState() =>
       _BottomNavigationBarControllerState();
@@ -71,7 +68,7 @@ class  _BottomNavigationBarControllerState
   }
 
   List<PopupMenuItem<int>>listpage2(){
-    int i=widget.mainSettPage.length;
+    int i=widget.mainSetPage.length;
     List<PopupMenuItem<int>> list=[];
     widget.secondSetPage.forEach((k, v) {
      print(i);
@@ -161,7 +158,7 @@ class  _BottomNavigationBarControllerState
       }
       );
     },
-    items: getbutton(widget.mainSettPage,false),
+    items: getbutton(widget.mainSetPage,false),
 
   );
 
@@ -186,7 +183,12 @@ class  _BottomNavigationBarControllerState
       if(widget.secondSetPage.isEmpty || widget.MoreListPage.isEmpty){
         throw('if you want ExtraIcons need sent map icons2 and MoreListPage');
       }
-
+     else
+       {
+         if(widget.secondSetPage.length!= widget.MoreListPage.length){
+           throw('secondSetPage.length!= MoreListPage.length');
+         }
+       }
     }
   }
   @override
@@ -195,13 +197,17 @@ class  _BottomNavigationBarControllerState
     checkerror();
     if(widget.ExtraIcons==true) {
       newmap = widget.ListPage + widget.MoreListPage;
+      newlist=widget.secondSetPage.entries.map((e) => (e.key)).toList();
+      newlist2=widget.mainSetPage.entries.map((e) => (e.key)).toList();
+      namepage=newlist2+newlist;
     }
     else{
       newmap = widget.ListPage;
+      newlist2=widget.mainSetPage.entries.map((e) => (e.key)).toList();
+      namepage=newlist2;
     }
-    newlist=widget.secondSetPage.entries.map((e) => (e.key)).toList();
-    newlist2=widget.mainSettPage.entries.map((e) => (e.key)).toList();
-    namepage=newlist2+newlist;
+
+
     // you have a valid context here
 
   }

@@ -49,8 +49,8 @@ class MyApp extends StatelessWidget {
       initialRoute: BottomNavigationBarController.id,
       routes: {
 
-        BottomNavigationBarController.id :(context)=> BottomNavigationBarController(ListPage: this.pages,mainSettPage: this.icons,
-            MoreListPage: this.pages2,secondSetPage: this.icons2, styleOpen:1),
+        BottomNavigationBarController.id :(context)=> BottomNavigationBarController(ListPage: this.pages,mainSetPage: this.icons,
+            MoreListPage: this.pages2,secondSetPage: this.icons2, styleOpen:0,ExtraIcons: true,),
 
       },
     );
