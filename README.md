@@ -17,4 +17,17 @@ create list<Widget> for all the pages
 EX  <img width="201" alt="list pages" src="https://user-images.githubusercontent.com/62427228/87847887-f9a9af00-c8e3-11ea-87b7-6ae8ed1d0560.PNG">
 * key vlaue== id vlaue  <img width="323" alt="same name" src="https://user-images.githubusercontent.com/62427228/87847988-ed722180-c8e4-11ea-861f-10eeffd23b94.PNG">
 
+ ```
+ List<Widget> pages = [
 
+    Page1(
+      key: PageStorageKey('page1'),
+    ),
+    Page2(
+      key: PageStorageKey('page2'),
+    ),
+    Page3(
+      key: PageStorageKey('page3'),
+    ),
+  ];
+  ```
