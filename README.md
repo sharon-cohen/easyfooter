@@ -1,10 +1,4 @@
-# easyfooter
-
-With this package all you need to do is 
-# just create the pages 
-and the package will take care of the navigation of your application
-
-## Getting Started
+# easyfooter- just create the pages and the package will take care of the navigation of your application
 
 # step 1
 create all your pages: statefull/stateless
@@ -79,5 +73,9 @@ Widget build(BuildContext context) {
   }
 ```
 # result
+![20200707_113755](https://user-images.githubusercontent.com/62427228/87848267-30cd8f80-c8e7-11ea-9b3e-67dece0cad99.gif)
+![footer2](https://user-images.githubusercontent.com/62427228/87848270-34611680-c8e7-11ea-80bd-2f6c9a1c81e8.gif)
+![fotter 3](https://user-images.githubusercontent.com/62427228/87848274-375c0700-c8e7-11ea-9a68-6716ad8fda32.gif)
+
 
  
