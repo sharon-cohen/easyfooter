@@ -96,11 +96,9 @@ Map<String,Icon> icons2={  ...  };
 List<Widget> pages2 = [ ...  ];    
 ```
 # styleOpen:1/ styleOpen:0 (defult)
-BottomNavigationBarController(ListPage: this.pages,mainSetPage: this.icons, MoreListPage: this.pages2,secondSetPage: this.icons2,ExtraIcons: true,styleOpen:1,)
+BottomNavigationBarController(ListPage: this.pages,mainSetPage: this.icons, MoreListPage: this.pages2,secondSetPage: this.icons2,ExtraIcons: true,styleOpen:1)
 <img width="191" alt="open2" src="https://user-images.githubusercontent.com/62427228/87848732-928ff880-c8eb-11ea-8520-2e7667d52653.PNG">
- styleOpen:0 (defult)
 <img width="201" alt="Open1" src="https://user-images.githubusercontent.com/62427228/87848737-9a4f9d00-c8eb-11ea-9dd2-268b8ed26024.PNG">
-styleOpen:1
 # background color 
 ```
 final Color backroundColorOne; \\ main pages
