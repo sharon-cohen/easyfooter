@@ -43,7 +43,7 @@ example
     ),
   ];
  ```
-* key vlaue== id vlaue 
+* key value== id value 
 ```                                    
 static const String id = "page2";    
 ////// EQUAL (==)///////
